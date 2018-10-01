@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["alacaba"]
   spec.email         = ["alacaba@gmx.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Halo 5 api}
+  spec.description   = %q{wrapper for 343i's halo 5 api https://developer.haloapi.com/docs/services/.}
+  spec.homepage      = ""
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
