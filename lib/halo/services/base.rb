@@ -1,3 +1,5 @@
+require 'json'
+
 module Halo
   module Services
     class Base
@@ -13,6 +15,13 @@ module Halo
         request['Ocp-Apim-Subscription-Key'] = client.api_key
         request
       end
+
+      def process_request(endpoint)
+        request = build_request(endpoint)
+        response = client.client.request request
+        JSON.parse(response)
+      end
+
     end
   end
 end

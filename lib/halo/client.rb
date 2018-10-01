@@ -1,6 +1,7 @@
 require 'net/http'
 require 'halo/services/base'
 require 'halo/services/profile'
+require 'halo/services/stats'
 
 module Halo
   class Client
@@ -20,6 +21,10 @@ module Halo
 
     def profile
       Halo::Services::Profile.new(self)
+    end
+
+    def stats
+      Halo::Services::Stats.new(self)
     end
 
   end
