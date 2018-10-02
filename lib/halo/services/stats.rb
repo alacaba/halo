@@ -108,6 +108,55 @@ module Halo
         endpoint = "/stats/h5pc/servicerecords/custom?players=#{players.join(',')}"
         process_request(endpoint)
       end
+
+      # halo wars 2
+
+      def halo_wars_leaderboard(season_id, playlist_id, count)
+        endpoint = URI("/stats/hw2/player-leaderboards/csr/#{season_id}/#{playlist_id}")
+        endpoint.query = URI.encode_www_form({ "count" => count })
+        process_request(endpoint)
+      end
+
+      def halo_wars_match_event(match_id)
+        endpoint = URI("/stats/hw2/matches/#{match_id}/events")
+        process_request(endpoint)
+      end
+
+      def halo_wars_match_result(match_id)
+        endpoint = URI("/stats/hw2/matches/#{match_id}")
+        process_request(endpoint)
+      end
+
+      def halo_wars_campaign_progress(player)
+        endpoint = URI("/stats/hw2/players/#{player}/campaign-progress")
+        process_request(endpoint)
+      end
+
+      def halo_wars_match_history(player, options = {})
+        endpoint = URI("/stats/hw2/players/#{player}/matches")
+        endpoint.query = URI.encode_www_form(options)
+        process_request(endpoint)
+      end
+
+      def halo_wars_player_ratings(playlist_id, players)
+        endpoint = URI("/stats/hw2/playlist/#{playlist_id}/rating?players=#{players.join(',')}")
+        process_request(endpoint)
+      end
+
+      def halo_wars_season_stats_summary(player, season_id)
+        endpoint = URI("/stats/hw2/players/#{player}/stats/seasons/#{season_id}")
+        process_request(endpoint)
+      end
+
+      def halo_wars_stats_summary(player)
+        endpoint = URI("/stats/hw2/players/#{player}/stats")
+        process_request(endpoint)
+      end
+
+      def halo_wars_player_xps(players)
+        endpoint = URI("/stats/hw2/xp?players=#{players.join(',')}")
+        process_request(endpoint)
+      end
     end
   end
 end
