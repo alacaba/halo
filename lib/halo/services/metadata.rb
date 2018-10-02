@@ -1,6 +1,12 @@
 module Halo
   module Services
     class Metadata < Base
+
+      HW2_METHODS = %w([ campaign_levels  campaign_logs card_keywords cards
+                         csr_designations difficulties game_object_categories
+                         game_objects leader_powers leaders maps packs
+                         playlists seasons spartan-ranks techs ])
+
       def campaign_missions
         endpoint = URI('/metadata/h5/metadata/campaign-missions')
         process_request(endpoint)
@@ -108,11 +114,7 @@ module Halo
 
       # halo wars
 
-      %w([ campaign_levels campaign_logs card_keywords cards
-           csr_designations difficulties game_object_categories
-           game_objects leader_powers leaders maps packs
-           playlists seasons spartan-ranks techs
-        ]).each do |method_name|
+      HW2_METHODS.each do |method_name|
         define_method method_name.to_sym do |start_at|
           start_at ||= nil
           endpoint = __method__.to_s.sub('_', '-')
