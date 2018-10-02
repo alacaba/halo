@@ -1,7 +1,9 @@
 require 'net/http'
+require 'json'
 require 'halo/services/base'
 require 'halo/services/profile'
 require 'halo/services/stats'
+require 'halo/services/metadata'
 
 module Halo
   class Client
@@ -27,5 +29,8 @@ module Halo
       Halo::Services::Stats.new(self)
     end
 
+    def metadata
+      Halo::Services::Metadata.new(self)
+    end
   end
 end

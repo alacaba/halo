@@ -1,5 +1,3 @@
-require 'json'
-
 module Halo
   module Services
     class Base
@@ -10,7 +8,7 @@ module Halo
       end
 
       def build_request(endpoint)
-        url = URI(client.base_uri + endpoint)
+        url = URI(client.base_uri) + endpoint
         request = Net::HTTP::Get.new(url)
         request['Ocp-Apim-Subscription-Key'] = client.api_key
         request
@@ -19,9 +17,8 @@ module Halo
       def process_request(endpoint)
         request = build_request(endpoint)
         response = client.client.request request
-        JSON.parse(response)
+        JSON.parse(response.body)
       end
-
     end
   end
 end
