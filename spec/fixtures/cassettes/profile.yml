@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.haloapi.com/profile/h5/profiles/xtovarisch/emblem?size=128
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.haloapi.com
+      Ocp-Apim-Subscription-Key:
+      - api-key
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Content-Length:
+      - '0'
+      Location:
+      - https://image.halocdn.com/h5/emblems/161_21_30_57?width=128&hash=pz2n9Ji7Rbnk67UWyxG3TjqzT0WvdTxJE09046jaVJQ%3d
+      Strict-Transport-Security:
+      - max-age=157680000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      E2eactivity:
+      - 5LNY8rmbD0O4j6X2MJRXLw==
+      Date:
+      - Fri, 11 Jan 2019 10:32:27 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 11 Jan 2019 10:32:27 GMT
+- request:
+    method: get
+    uri: https://www.haloapi.com/profile/h5/profiles/xtovarisch/spartan?crop=portrait&size=128
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.haloapi.com
+      Ocp-Apim-Subscription-Key:
+      - api-key
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Content-Length:
+      - '0'
+      Location:
+      - https://image.halocdn.com/h5/spartans/1088_1_2010_3053_57_45?width=128&crop=Portrait&api-version=2016-01-26&hash=4G61ACryBa%2frQAtVkx163Dfg1rvjkEmwPcmL4RHw2SI%3d
+      Strict-Transport-Security:
+      - max-age=157680000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      E2eactivity:
+      - PidZJ7zeOkmM5g8GgBhCBQ==
+      Date:
+      - Fri, 11 Jan 2019 10:32:28 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 11 Jan 2019 10:32:29 GMT
+- request:
+    method: get
+    uri: https://www.haloapi.com/profile/h5/profiles/xtovarisch/appearance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.haloapi.com
+      Ocp-Apim-Subscription-Key:
+      - api-key
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '304'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Fri, 11 Jan 2019 10:39:06 GMT
+      Vary:
+      - Accept-Encoding,Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=157680000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      E2eactivity:
+      - zBTE1x8wZkGHuUxJC4dwdw==
+      Date:
+      - Fri, 11 Jan 2019 10:39:05 GMT
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"Gamertag\": \"xtovarisch\",\r\n  \"LastModifiedUtc\": {\r\n
+        \   \"ISO8601Date\": \"2019-01-07T00:00:00Z\"\r\n  },\r\n  \"FirstModifiedUtc\":
+        {\r\n    \"ISO8601Date\": \"2015-10-22T00:00:00Z\"\r\n  },\r\n  \"ServiceTag\":
+        \"1917\",\r\n  \"Company\": {\r\n    \"Id\": \"493702d3-7d86-48ad-b128-addd4cf73192\",\r\n
+        \   \"Name\": \"PH Spartans\"\r\n  }\r\n}"
+    http_version: 
+  recorded_at: Fri, 11 Jan 2019 10:39:06 GMT
+recorded_with: VCR 4.0.0

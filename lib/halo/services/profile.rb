@@ -3,19 +3,17 @@ module Halo
     class Profile < Base
       def appearance(gt)
         endpoint = URI("/profile/h5/profiles/#{gt}/appearance")
-        process_request(endpoint)
+        ::Response.result(request(endpoint))
       end
 
-      def emblem(gt, query = {})
-        endpoint = URI("/profile/h5/profiles/#{gt}/emblem")
-        endpoint.query = URI.encode_www_form(query)
-        process_request(endpoint)
+      def emblem(gt, size=128)
+        endpoint = URI("/profile/h5/profiles/#{gt}/emblem?size=#{size}")
+        ::Response.result(request(endpoint))
       end
 
-      def spartan(gt, query = {})
-        endpoint = URI("/profile/h5/profiles/#{gt}/spartan")
-        endpoint.query = URI.encode_www_form(query)
-        process(request_endpoint)
+      def spartan(gt, size = 128, crop = 'portrait')
+        endpoint = URI("/profile/h5/profiles/#{gt}/spartan?size=#{size}&crop=#{crop}")
+        ::Response.result(request(endpoint))
       end
     end
   end

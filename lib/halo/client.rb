@@ -4,6 +4,7 @@ require 'halo/services/base'
 require 'halo/services/profile'
 require 'halo/services/stats'
 require 'halo/services/metadata'
+require 'halo/response'
 
 module Halo
   class Client

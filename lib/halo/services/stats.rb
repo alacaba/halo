@@ -29,7 +29,7 @@ module Halo
       end
 
       def match_result_campaign(match_id)
-        match_result('compaign', match_id)
+        match_result('campaign', match_id)
       end
 
       def match_result_custom(match_id)
